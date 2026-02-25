@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve Rajeckas | Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --text-secondary: #666666;
+            --accent: #a381ff;
+            --border: #e5e5e5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media print {
+            body {
+                font-size: 11pt;
+            }
+            .no-print {
+                display: none;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px 32px;
+        }
+
+        header {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--text);
+        }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .summary {
+            margin-bottom: 32px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        section {
+            margin-bottom: 28px;
+        }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .job {
+            margin-bottom: 24px;
+        }
+
+        .job:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .job-title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .job-date {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .job-company {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .job-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        ul {
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        li strong {
+            font-weight: 600;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .skill-item h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .skill-item p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .why-stability {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 3px solid var(--accent);
+            margin-top: 24px;
+        }
+
+        .why-stability h2 {
+            border: none;
+            padding: 0;
+            margin-bottom: 12px;
+        }
+
+        .why-stability p {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .why-stability p:last-child {
+            margin-bottom: 0;
+        }
+
+        .education {
+            font-size: 14px;
+        }
+
+        .education strong {
+            font-weight: 600;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .print-btn:hover {
+            background: #8a6de0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 24px 16px;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .job-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <h1>Steve Rajeckas</h1>
+        <div class="contact-info">
+            <span>Clinton, NJ</span>
+            <a href="mailto:srajeckas@gmail.com">srajeckas@gmail.com</a>
+            <span>(201) 874-0040</span>
+            <a href="https://www.linkedin.com/in/steve-rajeckas/" target="_blank">LinkedIn</a>
+        </div>
+    </header>
+
+    <div class="summary">
+        AI-native content leader running solo operations for a 9-figure company using Claude Code and n8n. Former founder of a 7-figure content agency (35k+ articles, 1k clients, 250+ team). Scriptwriter and creative director for YouTube content. Translate complex technical concepts into accessible, engaging content across formats.
+    </div>
+
+    <section>
+        <h2>Experience</h2>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Head of Content</span>
+                <span class="job-date">August 2024 - Present</span>
+            </div>
+            <div class="job-company">Red Stag Fulfillment</div>
+            <div class="job-description">One-person content operation for a 9-figure logistics company using Claude Code, n8n, and editorial judgment.</div>
+            <ul>
+                <li><strong>Executive Ghostwriting:</strong> LinkedIn content for C-suite, brand account, and BDRs. Content directly attributed to enterprise leads including PE firms and $2B+ manufacturers.</li>
+                <li><strong>AI-Powered SEO:</strong> Built workflows replacing $15k/month external budget. 4,200+ non-paid MQLs since joining. Contributed to 49% YoY MQL growth and 18% lower cost per MQL.</li>
+                <li><strong>Tool Building:</strong> Created lead gen tools and internal tools with Claude Code.</li>
+                <li><strong>Multi-Format Content:</strong> 25+ pieces of sales collateral, sales page copywriting, pitch decks, blog posts, case studies.</li>
+                <li><strong>Content Automations:</strong> SEO pipelines, social distribution, repurposing workflows built with n8n and Gumloop.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Content Manager</span>
+                <span class="job-date">July 2023 - August 2024</span>
+            </div>
+            <div class="job-company">Authority Hacker</div>
+            <div class="job-description">Content strategy and production for a leading SEO education brand. AI-native since 2023.</div>
+            <ul>
+                <li><strong>Video Production:</strong> Scriptwriter and creative director for Authority Hacker News YouTube channel. Wrote scripts, shaped creative direction, defined editorial voice for video content.</li>
+                <li><strong>Content Production:</strong> Authored 60+ blog posts; led AI content transition strategy.</li>
+                <li><strong>SEO Strategy:</strong> Developed content frameworks driving organic traffic growth.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Founder</span>
+                <span class="job-date">December 2019 - May 2023</span>
+            </div>
+            <div class="job-company">We Write Blog Posts LLC</div>
+            <div class="job-description">Built and scaled a content agency from zero to 7-figure annual revenue.</div>
+            <ul>
+                <li><strong>Scale:</strong> 35,000+ articles delivered, 1,000 clients served, 250+ remote team members at peak.</li>
+                <li><strong>Operations:</strong> Developed all editorial processes, writer training systems, and quality frameworks from scratch.</li>
+                <li><strong>Editorial Oversight:</strong> Personally written 500+ articles, edited 5,000+, oversaw production of 20,000+.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Founder</span>
+                <span class="job-date">February 2020 - January 2023</span>
+            </div>
+            <div class="job-company">TemperatureMaster.com</div>
+            <div class="job-description">Built and exited a content-driven niche media property.</div>
+            <ul>
+                <li>Grew to 750+ articles, 250k monthly pageviews, $12k monthly revenue.</li>
+                <li><strong>Six-figure exit in 2023.</strong></li>
+                <li>Monetized through programmatic ads, affiliate, and lead generation.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>AI-Native Content Creation</h3>
+                <p>Claude Code for building tools, workflows, and content. Know when AI adds value vs. when human craft is required.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Multi-Format Production</h3>
+                <p>Blog posts, white papers, video scripts, social content, sales collateral, pitch decks.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Video & Creative Direction</h3>
+                <p>Scriptwriting, creative direction, editorial voice for YouTube content.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Thought Leadership</h3>
+                <p>Executive ghostwriting, brand voice development, translating technical concepts.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Content Operations</h3>
+                <p>Editorial process design, workflow automation, team scaling (1 to 250+).</p>
+            </div>
+            <div class="skill-item">
+                <h3>Tools</h3>
+                <p>Claude Code, n8n, Notion, Google Suite, CMS platforms, video production workflows.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="education">
+            <strong>Bachelor of Arts, English + Professional Writing</strong><br>
+            The College of New Jersey — 2016
+        </div>
+    </section>
+
+    <div class="why-stability">
+        <h2>Why Stability AI</h2>
+        <p>You're looking for an AI-forward creator who uses AI tools to accelerate creative production. I've been doing exactly that since 2023—using Claude Code daily to run content operations that would traditionally require a team of 3-5 people.</p>
+        <p>I understand both sides: the creative craft that makes content resonate, and the AI tools that multiply output without sacrificing quality. That's the balance you need for telling Stability's story.</p>
+    </div>
+
+    <button class="print-btn no-print" onclick="window.print()">Print / Save PDF</button>
+</body>
+</html>
